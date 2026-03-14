@@ -8,67 +8,67 @@
         "id": "1773329620273",
         "word": "fruit",
         "sentence": "Look at the fruits",
-        "wordImage": "/samples/1773329598506/1773329620273-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329620273-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329620273-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329620273-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329620273-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329620273-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329620273-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329620273-sentence-audio.wav"
       },
       {
         "id": "1773329640880",
         "word": "vegetable",
         "sentence": "Look at the vegetables",
-        "wordImage": "/samples/1773329598506/1773329640880-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329640880-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329640880-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329640880-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329640880-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329640880-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329640880-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329640880-sentence-audio.wav"
       },
       {
         "id": "1773329661784",
         "word": "egg",
         "sentence": "Look at the eggs",
-        "wordImage": "/samples/1773329598506/1773329661784-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329661784-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329661784-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329661784-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329661784-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329661784-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329661784-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329661784-sentence-audio.wav"
       },
       {
         "id": "1773329675520",
         "word": "fish",
         "sentence": "Look at the fish",
-        "wordImage": "/samples/1773329598506/1773329675520-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329675520-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329675520-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329675520-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329675520-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329675520-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329675520-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329675520-sentence-audio.wav"
       },
       {
         "id": "1773329691104",
         "word": "meat",
         "sentence": "Look at the meat",
-        "wordImage": "/samples/1773329598506/1773329691104-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329691104-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329691104-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329691104-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329691104-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329691104-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329691104-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329691104-sentence-audio.wav"
       },
       {
         "id": "1773329707000",
         "word": "candy",
         "sentence": "Look at the candies",
-        "wordImage": "/samples/1773329598506/1773329707000-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329707000-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329707000-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329707000-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329707000-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329707000-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329707000-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329707000-sentence-audio.wav"
       },
       {
         "id": "1773329723752",
         "word": "toy",
         "sentence": "Look at the toys",
-        "wordImage": "/samples/1773329598506/1773329723752-word.jpg",
-        "wordAudio": "/samples/1773329598506/1773329723752-word-audio.wav",
-        "sentenceImage": "/samples/1773329598506/1773329723752-sentence.jpg",
-        "sentenceAudio": "/samples/1773329598506/1773329723752-sentence-audio.wav"
+        "wordImage": "samples/1773329598506/1773329723752-word.jpg",
+        "wordAudio": "samples/1773329598506/1773329723752-word-audio.wav",
+        "sentenceImage": "samples/1773329598506/1773329723752-sentence.jpg",
+        "sentenceAudio": "samples/1773329598506/1773329723752-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773329598506/cover.jpg"
+    "coverImage": "samples/1773329598506/cover.jpg"
   },
   {
     "id": "1773407361433",
@@ -79,67 +79,67 @@
         "id": "1773407392654",
         "word": "jump",
         "sentence": "My dog can jump",
-        "wordImage": "/samples/1773407361433/1773407392654-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407392654-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407392654-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407392654-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407392654-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407392654-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407392654-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407392654-sentence-audio.wav"
       },
       {
         "id": "1773407413622",
         "word": "run",
         "sentence": "My dog can run",
-        "wordImage": "/samples/1773407361433/1773407413622-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407413622-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407413622-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407413622-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407413622-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407413622-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407413622-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407413622-sentence-audio.wav"
       },
       {
         "id": "1773407430926",
         "word": "swim",
         "sentence": "My dog can swim",
-        "wordImage": "/samples/1773407361433/1773407430926-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407430926-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407430926-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407430926-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407430926-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407430926-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407430926-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407430926-sentence-audio.wav"
       },
       {
         "id": "1773407441973",
         "word": "dig",
         "sentence": "My dog can dig",
-        "wordImage": "/samples/1773407361433/1773407441973-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407441973-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407441973-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407441973-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407441973-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407441973-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407441973-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407441973-sentence-audio.wav"
       },
       {
         "id": "1773407455317",
         "word": "climb",
         "sentence": "My dog can climb",
-        "wordImage": "/samples/1773407361433/1773407455317-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407455317-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407455317-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407455317-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407455317-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407455317-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407455317-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407455317-sentence-audio.wav"
       },
       {
         "id": "1773407476615",
         "word": "sit",
         "sentence": "My dog can sit",
-        "wordImage": "/samples/1773407361433/1773407476615-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407476615-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407476615-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407476615-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407476615-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407476615-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407476615-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407476615-sentence-audio.wav"
       },
       {
         "id": "1773407486814",
         "word": "roll over",
         "sentence": "My dog can roll over",
-        "wordImage": "/samples/1773407361433/1773407486814-word.jpg",
-        "wordAudio": "/samples/1773407361433/1773407486814-word-audio.wav",
-        "sentenceImage": "/samples/1773407361433/1773407486814-sentence.jpg",
-        "sentenceAudio": "/samples/1773407361433/1773407486814-sentence-audio.wav"
+        "wordImage": "samples/1773407361433/1773407486814-word.jpg",
+        "wordAudio": "samples/1773407361433/1773407486814-word-audio.wav",
+        "sentenceImage": "samples/1773407361433/1773407486814-sentence.jpg",
+        "sentenceAudio": "samples/1773407361433/1773407486814-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773407361433/cover.jpg"
+    "coverImage": "samples/1773407361433/cover.jpg"
   },
   {
     "id": "1773407816934",
@@ -150,67 +150,67 @@
         "id": "1773407852102",
         "word": "shirt",
         "sentence": "I see the funny shirt",
-        "wordImage": "/samples/1773407816934/1773407852102-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407852102-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407852102-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407852102-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407852102-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407852102-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407852102-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407852102-sentence-audio.wav"
       },
       {
         "id": "1773407878925",
         "word": "pants",
         "sentence": "I see the funny pants",
-        "wordImage": "/samples/1773407816934/1773407878925-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407878925-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407878925-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407878925-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407878925-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407878925-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407878925-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407878925-sentence-audio.wav"
       },
       {
         "id": "1773407927141",
         "word": "shoes",
         "sentence": "I see the funny shoes",
-        "wordImage": "/samples/1773407816934/1773407927141-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407927141-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407927141-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407927141-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407927141-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407927141-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407927141-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407927141-sentence-audio.wav"
       },
       {
         "id": "1773407955741",
         "word": "coat",
         "sentence": "I see the funny coat",
-        "wordImage": "/samples/1773407816934/1773407955741-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407955741-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407955741-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407955741-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407955741-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407955741-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407955741-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407955741-sentence-audio.wav"
       },
       {
         "id": "1773407973680",
         "word": "tie",
         "sentence": "I see the funny tie",
-        "wordImage": "/samples/1773407816934/1773407973680-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407973680-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407973680-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407973680-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407973680-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407973680-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407973680-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407973680-sentence-audio.wav"
       },
       {
         "id": "1773407982448",
         "word": "hat",
         "sentence": "I see the funny hat",
-        "wordImage": "/samples/1773407816934/1773407982448-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773407982448-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773407982448-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773407982448-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773407982448-word.jpg",
+        "wordAudio": "samples/1773407816934/1773407982448-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773407982448-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773407982448-sentence-audio.wav"
       },
       {
         "id": "1773408122302",
         "word": "glasses",
         "sentence": "I see the funny glasses",
-        "wordImage": "/samples/1773407816934/1773408122302-word.jpg",
-        "wordAudio": "/samples/1773407816934/1773408122302-word-audio.wav",
-        "sentenceImage": "/samples/1773407816934/1773408122302-sentence.jpg",
-        "sentenceAudio": "/samples/1773407816934/1773408122302-sentence-audio.wav"
+        "wordImage": "samples/1773407816934/1773408122302-word.jpg",
+        "wordAudio": "samples/1773407816934/1773408122302-word-audio.wav",
+        "sentenceImage": "samples/1773407816934/1773408122302-sentence.jpg",
+        "sentenceAudio": "samples/1773407816934/1773408122302-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773407816934/cover.jpg"
+    "coverImage": "samples/1773407816934/cover.jpg"
   },
   {
     "id": "1773409414862",
@@ -221,67 +221,67 @@
         "id": "1773409651394",
         "word": "bear",
         "sentence": "I am a bear",
-        "wordImage": "/samples/1773409414862/1773409651394-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409651394-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409651394-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409651394-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409651394-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409651394-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409651394-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409651394-sentence-audio.wav"
       },
       {
         "id": "1773409733138",
         "word": "mouse",
         "sentence": "I am a mouse",
-        "wordImage": "/samples/1773409414862/1773409733138-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409733138-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409733138-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409733138-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409733138-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409733138-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409733138-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409733138-sentence-audio.wav"
       },
       {
         "id": "1773409755746",
         "word": "tiger",
         "sentence": "I am a tiger",
-        "wordImage": "/samples/1773409414862/1773409755746-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409755746-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409755746-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409755746-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409755746-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409755746-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409755746-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409755746-sentence-audio.wav"
       },
       {
         "id": "1773409773451",
         "word": "duck",
         "sentence": "I am a duck",
-        "wordImage": "/samples/1773409414862/1773409773451-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409773451-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409773451-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409773451-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409773451-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409773451-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409773451-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409773451-sentence-audio.wav"
       },
       {
         "id": "1773409784122",
         "word": "lion",
         "sentence": "I am a lion",
-        "wordImage": "/samples/1773409414862/1773409784122-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409784122-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409784122-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409784122-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409784122-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409784122-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409784122-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409784122-sentence-audio.wav"
       },
       {
         "id": "1773409811611",
         "word": "cow",
         "sentence": "I am a cow",
-        "wordImage": "/samples/1773409414862/1773409811611-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409811611-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409811611-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409811611-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409811611-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409811611-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409811611-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409811611-sentence-audio.wav"
       },
       {
         "id": "1773409824076",
         "word": "horse",
         "sentence": "I am a horse",
-        "wordImage": "/samples/1773409414862/1773409824076-word.jpg",
-        "wordAudio": "/samples/1773409414862/1773409824076-word-audio.wav",
-        "sentenceImage": "/samples/1773409414862/1773409824076-sentence.jpg",
-        "sentenceAudio": "/samples/1773409414862/1773409824076-sentence-audio.wav"
+        "wordImage": "samples/1773409414862/1773409824076-word.jpg",
+        "wordAudio": "samples/1773409414862/1773409824076-word-audio.wav",
+        "sentenceImage": "samples/1773409414862/1773409824076-sentence.jpg",
+        "sentenceAudio": "samples/1773409414862/1773409824076-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773409414862/cover.jpg"
+    "coverImage": "samples/1773409414862/cover.jpg"
   },
   {
     "id": "1773411088267",
@@ -292,67 +292,67 @@
         "id": "1773411138610",
         "word": "cup",
         "sentence": "We have five cups",
-        "wordImage": "/samples/1773411088267/1773411138610-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411138610-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411138610-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411138610-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411138610-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411138610-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411138610-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411138610-sentence-audio.wav"
       },
       {
         "id": "1773411153818",
         "word": "plate",
         "sentence": "We have five plates",
-        "wordImage": "/samples/1773411088267/1773411153818-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411153818-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411153818-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411153818-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411153818-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411153818-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411153818-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411153818-sentence-audio.wav"
       },
       {
         "id": "1773411178810",
         "word": "bowl",
         "sentence": "We have five bowls",
-        "wordImage": "/samples/1773411088267/1773411178810-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411178810-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411178810-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411178810-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411178810-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411178810-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411178810-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411178810-sentence-audio.wav"
       },
       {
         "id": "1773411201794",
         "word": "fork",
         "sentence": "We have five forks",
-        "wordImage": "/samples/1773411088267/1773411201794-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411201794-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411201794-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411201794-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411201794-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411201794-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411201794-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411201794-sentence-audio.wav"
       },
       {
         "id": "1773411213994",
         "word": "spoon",
         "sentence": "We have five spoons",
-        "wordImage": "/samples/1773411088267/1773411213994-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411213994-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411213994-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411213994-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411213994-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411213994-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411213994-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411213994-sentence-audio.wav"
       },
       {
         "id": "1773411229745",
         "word": "pan",
         "sentence": "We have five pans",
-        "wordImage": "/samples/1773411088267/1773411229745-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411229745-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411229745-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411229745-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411229745-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411229745-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411229745-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411229745-sentence-audio.wav"
       },
       {
         "id": "1773411249521",
         "word": "chair",
         "sentence": "We have five chairs",
-        "wordImage": "/samples/1773411088267/1773411249521-word.jpg",
-        "wordAudio": "/samples/1773411088267/1773411249521-word-audio.wav",
-        "sentenceImage": "/samples/1773411088267/1773411249521-sentence.jpg",
-        "sentenceAudio": "/samples/1773411088267/1773411249521-sentence-audio.wav"
+        "wordImage": "samples/1773411088267/1773411249521-word.jpg",
+        "wordAudio": "samples/1773411088267/1773411249521-word-audio.wav",
+        "sentenceImage": "samples/1773411088267/1773411249521-sentence.jpg",
+        "sentenceAudio": "samples/1773411088267/1773411249521-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773411088267/cover.jpg"
+    "coverImage": "samples/1773411088267/cover.jpg"
   },
   {
     "id": "1773413573612",
@@ -363,66 +363,66 @@
         "id": "1773413589546",
         "word": "monkey",
         "sentence": "The monkey is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413589546-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413589546-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413589546-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413589546-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413589546-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413589546-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413589546-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413589546-sentence-audio.wav"
       },
       {
         "id": "1773413627074",
         "word": "panda",
         "sentence": "The panda is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413627074-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413627074-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413627074-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413627074-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413627074-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413627074-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413627074-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413627074-sentence-audio.wav"
       },
       {
         "id": "1773413644067",
         "word": "hippo",
         "sentence": "The hippo is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413644067-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413644067-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413644067-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413644067-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413644067-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413644067-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413644067-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413644067-sentence-audio.wav"
       },
       {
         "id": "1773413669593",
         "word": "lion",
         "sentence": "The lion is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413669593-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413669593-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413669593-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413669593-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413669593-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413669593-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413669593-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413669593-sentence-audio.wav"
       },
       {
         "id": "1773413683433",
         "word": "elephant",
         "sentence": "The elephant is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413683433-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413683433-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413683433-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413683433-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413683433-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413683433-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413683433-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413683433-sentence-audio.wav"
       },
       {
         "id": "1773413710217",
         "word": "tiger",
         "sentence": "The tiger is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413710217-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413710217-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413710217-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413710217-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413710217-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413710217-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413710217-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413710217-sentence-audio.wav"
       },
       {
         "id": "1773413729256",
         "word": "zebra",
         "sentence": "The zebra is in the zoo",
-        "wordImage": "/samples/1773413573612/1773413729256-word.jpg",
-        "wordAudio": "/samples/1773413573612/1773413729256-word-audio.wav",
-        "sentenceImage": "/samples/1773413573612/1773413729256-sentence.jpg",
-        "sentenceAudio": "/samples/1773413573612/1773413729256-sentence-audio.wav"
+        "wordImage": "samples/1773413573612/1773413729256-word.jpg",
+        "wordAudio": "samples/1773413573612/1773413729256-word-audio.wav",
+        "sentenceImage": "samples/1773413573612/1773413729256-sentence.jpg",
+        "sentenceAudio": "samples/1773413573612/1773413729256-sentence-audio.wav"
       }
     ],
-    "coverImage": "/samples/1773413573612/cover.jpg"
+    "coverImage": "samples/1773413573612/cover.jpg"
   }
 ]
