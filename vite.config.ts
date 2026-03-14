@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
   // 只在开发模式下注入 API Key，生产构建不打包 Key
   const isDev = mode === 'development';
   return {
-    base: '/letstalk/',
+    base: './',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(isDev ? env.GEMINI_API_KEY : ''),
