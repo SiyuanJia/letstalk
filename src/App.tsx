@@ -34,6 +34,25 @@ export default function App() {
     const loadData = async () => {
       try {
         const storedBooks = await getBooks();
+        
+        // 如果数据库为空，尝试从 public/samples/manifest.json 加载预置数据
+        if (storedBooks.length === 0) {
+          try {
+            const response = await fetch('./samples/manifest.json');
+            if (response.ok) {
+              const manifestBooks = await response.json();
+              if (Array.isArray(manifestBooks) && manifestBooks.length > 0) {
+                setBooks(manifestBooks);
+                // 同时保存到本地数据库，方便后续离线使用或修改
+                await saveBooks(manifestBooks);
+                return;
+              }
+            }
+          } catch (e) {
+            console.warn('No manifest.json found or failed to load preset books');
+          }
+        }
+        
         setBooks(storedBooks);
       } catch (error) {
         console.error('Failed to load books:', error);
