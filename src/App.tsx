@@ -4,8 +4,11 @@ import { getBooks, saveBooks } from './services/db';
 import { Home } from './components/Home';
 import { BookEditor } from './components/BookEditor';
 import { FlashcardViewer } from './components/FlashcardViewer';
+import { GameView } from './components/GameView';
+import { canPlayBookGame } from './utils/game';
 
-type ViewState = 'home' | 'editor' | 'viewer';
+type ViewState = 'home' | 'editor' | 'viewer' | 'game';
+type GameSource = 'home' | 'viewer';
 
 // 管理员密码（仅用于本地开发导出，不涉及安全场景）
 const ADMIN_PASSWORD = 'letstalk2025';
@@ -17,6 +20,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasKey, setHasKey] = useState<boolean | null>(null);
   const [isAdminMode, setIsAdminMode] = useState(false);
+  const [gameSource, setGameSource] = useState<GameSource>('home');
 
   useEffect(() => {
     const checkKey = async () => {
@@ -113,6 +117,21 @@ export default function App() {
     setCurrentView('viewer');
   };
 
+  const handlePlayGame = (id: string, source: GameSource = 'home') => {
+    setActiveBookId(id);
+    setGameSource(source);
+    setCurrentView('game');
+  };
+
+  const handleBackFromGame = () => {
+    if (gameSource === 'viewer' && activeBookId) {
+      setCurrentView('viewer');
+      return;
+    }
+
+    handleBackToHome();
+  };
+
   const handleBackToHome = () => {
     setCurrentView('home');
     setActiveBookId(null);
@@ -157,6 +176,7 @@ export default function App() {
           onAddBook={handleAddBook}
           onEditBook={handleEditBook}
           onViewBook={handleViewBook}
+          onPlayGame={handlePlayGame}
           isAdminMode={isAdminMode}
           onToggleAdmin={handleToggleAdmin}
           allBooks={books}
@@ -173,6 +193,14 @@ export default function App() {
         <FlashcardViewer
           book={activeBook}
           onBack={handleBackToHome}
+          onPlayGame={canPlayBookGame(activeBook) ? () => handlePlayGame(activeBook.id, 'viewer') : undefined}
+        />
+      )}
+      {currentView === 'game' && activeBook && (
+        <GameView
+          book={activeBook}
+          onBack={handleBackFromGame}
+          backLabel={gameSource === 'viewer' ? '返回绘本' : '返回首页'}
         />
       )}
     </div>

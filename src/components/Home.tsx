@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import { Book } from '../types';
-import { Plus, BookOpen, Settings, Download, Shield, ShieldOff } from 'lucide-react';
+import { Plus, BookOpen, Settings, Download, Shield, ShieldOff, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 import { exportBookAsZip } from '../utils/exportSamples';
+import { canPlayBookGame } from '../utils/game';
 
 interface HomeProps {
   books: Book[];
   onAddBook: () => void;
   onEditBook: (id: string) => void;
   onViewBook: (id: string) => void;
+  onPlayGame: (id: string) => void;
   isAdminMode: boolean;
   onToggleAdmin: () => void;
   allBooks: Book[];
 }
 
 // 浮动装饰元素
-const FloatingShape = ({ className, delay = 0 }: { className: string; delay?: number }) => (
+const FloatingShape = ({ className, delay = 0, style }: { className: string; delay?: number; style?: React.CSSProperties }) => (
   <motion.div
     className={className}
+    style={style}
     animate={{ y: [0, -12, 0], rotate: [0, 8, -8, 0] }}
     transition={{ duration: 4 + delay, repeat: Infinity, ease: 'easeInOut', delay }}
   />
@@ -28,6 +31,7 @@ export const Home: React.FC<HomeProps> = ({
   onAddBook,
   onEditBook,
   onViewBook,
+  onPlayGame,
   isAdminMode,
   onToggleAdmin,
   allBooks,
@@ -162,16 +166,17 @@ export const Home: React.FC<HomeProps> = ({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           onClick={onToggleAdmin}
-          className={`mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all border ${
+          title={isAdminMode ? '退出管理员模式' : '进入管理员模式'}
+          className={`absolute top-4 right-4 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full text-xs font-medium transition-all border shadow-sm backdrop-blur-sm ${
             isAdminMode
-              ? 'bg-violet-100 text-violet-600 border-violet-300 hover:bg-violet-200'
-              : 'bg-slate-100 text-slate-400 border-slate-200 hover:bg-slate-200 hover:text-slate-500'
+              ? 'bg-violet-100/95 text-violet-600 border-violet-300 hover:bg-violet-200/95'
+              : 'bg-white/75 text-slate-400 border-slate-200 hover:bg-white hover:text-slate-500'
           }`}
         >
           {isAdminMode ? (
-            <><ShieldOff className="w-3 h-3" /> 退出管理员模式</>
+            <ShieldOff className="w-4 h-4" />
           ) : (
-            <><Shield className="w-3 h-3" /> 管理员</>
+            <Shield className="w-4 h-4" />
           )}
         </motion.button>
 
@@ -179,7 +184,7 @@ export const Home: React.FC<HomeProps> = ({
           <motion.p
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-2 text-xs text-violet-500 font-medium"
+            className="absolute top-16 right-4 z-20 max-w-52 rounded-2xl bg-white/90 px-3 py-2 text-left text-xs text-violet-500 font-medium shadow-md border border-violet-100"
           >
             管理员模式：点击绘本上的导出按钮，下载 ZIP 后解压放入 public/samples/
           </motion.p>
@@ -187,22 +192,25 @@ export const Home: React.FC<HomeProps> = ({
       </header>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 max-w-4xl mx-auto px-4 pb-12 relative z-10">
-        {books.map((book, idx) => (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.06 }}
-            whileHover={{ scale: 1.04, y: -4 }}
-            whileTap={{ scale: 0.97 }}
-            key={book.id}
-            className="rounded-3xl overflow-hidden flex flex-col cursor-pointer relative group"
-            style={{
-              background: 'rgba(255,255,255,0.9)',
-              border: '1px solid rgba(0,0,0,0.07)',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-            }}
-            onClick={() => onViewBook(book.id)}
-          >
+        {books.map((book, idx) => {
+          const isGameReady = canPlayBookGame(book);
+
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.06 }}
+              whileHover={{ scale: 1.04, y: -4 }}
+              whileTap={{ scale: 0.97 }}
+              key={book.id}
+              className="rounded-3xl overflow-hidden flex flex-col cursor-pointer relative group"
+              style={{
+                background: 'rgba(255,255,255,0.9)',
+                border: '1px solid rgba(0,0,0,0.07)',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+              }}
+              onClick={() => onViewBook(book.id)}
+            >
             {/* 悬停时的霓虹边框光效 */}
             <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
               style={{ boxShadow: 'inset 0 0 0 1.5px rgba(255,0,110,0.5), 0 0 20px rgba(255,0,110,0.15)' }} />
@@ -219,6 +227,21 @@ export const Home: React.FC<HomeProps> = ({
                 <BookOpen className="w-12 h-12 text-white/20 transition-transform duration-300 group-hover:scale-110 group-hover:text-[#00d9ff]" />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onPlayGame(book.id);
+                }}
+                className={`absolute top-3 left-3 p-2 rounded-full text-white transition-all duration-300 hover:scale-110 ${
+                  isGameReady ? 'opacity-100 sm:opacity-0 sm:group-hover:opacity-100' : 'opacity-40 cursor-not-allowed'
+                }`}
+                style={{ background: 'rgba(0,217,255,0.85)', backdropFilter: 'blur(4px)' }}
+                title={isGameReady ? '开始游戏' : '至少需要 2 张带图片和音频的卡片'}
+                disabled={!isGameReady}
+              >
+                <Sparkles className="w-4 h-4" />
+              </button>
 
               {/* 编辑按钮 */}
               <button
@@ -259,7 +282,7 @@ export const Home: React.FC<HomeProps> = ({
               )}
             </div>
           </motion.div>
-        ))}
+        )})}
 
         {/* 添加新绘本 */}
         <motion.div

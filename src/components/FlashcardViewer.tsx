@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Book, Flashcard } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
-import { Volume2, ArrowLeft, ArrowRight, RotateCcw, Home } from 'lucide-react';
+import { Volume2, ArrowLeft, ArrowRight, RotateCcw, Home, Sparkles } from 'lucide-react';
 import { createWavDataUri } from '../services/ai';
 
 interface FlashcardViewerProps {
   book: Book;
   onBack: () => void;
+  onPlayGame?: () => void;
 }
 
-export const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ book, onBack }) => {
+export const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ book, onBack, onPlayGame }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -20,12 +21,23 @@ export const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ book, onBack }
     setIsFlipped(false);
   }, [currentIndex]);
 
-  const playAudio = (audioData?: string) => {
-    if (!audioData) return;
+  useEffect(() => {
+    return () => {
+      stopAudio();
+    };
+  }, []);
+
+  const stopAudio = () => {
     if (audioRef.current) {
       audioRef.current.pause();
+      audioRef.current = null;
     }
-    
+  };
+
+  const playAudio = (audioData?: string) => {
+    if (!audioData) return;
+    stopAudio();
+
     let finalAudioData = audioData;
     if (audioData.startsWith('data:audio/pcm')) {
       const base64 = audioData.split('base64,')[1];
@@ -72,7 +84,18 @@ export const FlashcardViewer: React.FC<FlashcardViewerProps> = ({ book, onBack }
         <button onClick={onBack} className="p-2 text-[#ff8c00] hover:bg-[#ff8c00]/10 rounded-full transition-colors">
           <Home className="w-6 h-6" />
         </button>
-        <h1 className="text-lg font-bold text-slate-800 truncate px-4">{book.title}</h1>
+        <div className="flex items-center gap-2 min-w-0 px-4">
+          <h1 className="text-lg font-bold text-slate-800 truncate">{book.title}</h1>
+          {onPlayGame && (
+            <button
+              onClick={onPlayGame}
+              className="w-10 h-10 bg-gradient-to-br from-[#00d9ff] to-[#0088ff] hover:opacity-90 rounded-full flex items-center justify-center text-white shadow-md shadow-[#00d9ff]/20 transition-transform active:scale-95 shrink-0"
+              title="开始游戏"
+            >
+              <Sparkles className="w-5 h-5" />
+            </button>
+          )}
+        </div>
         <div className="w-10" /> {/* Spacer for centering */}
       </header>
 
