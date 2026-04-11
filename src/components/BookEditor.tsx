@@ -9,6 +9,17 @@ interface BookEditorProps {
   onCancel: () => void;
 }
 
+type GenerationTask =
+  | { kind: 'cover'; label: string }
+  | { kind: 'wordImage'; cardIndex: number; cardId: string; text: string; label: string }
+  | { kind: 'wordAudio'; cardIndex: number; cardId: string; text: string; label: string }
+  | { kind: 'sentenceImage'; cardIndex: number; cardId: string; text: string; label: string }
+  | { kind: 'sentenceAudio'; cardIndex: number; cardId: string; text: string; label: string };
+
+const GENERATION_DELAY_MS = 600;
+
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onCancel }) => {
   const [book, setBook] = useState<Book>(
     initialBook || {
@@ -45,7 +56,29 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
   const handleUpdateCard = (id: string, field: keyof Flashcard, value: string) => {
     setBook({
       ...book,
-      cards: book.cards.map((c) => (c.id === id ? { ...c, [field]: value } : c)),
+      cards: book.cards.map((c) => {
+        if (c.id !== id) return c;
+
+        if (field === 'word') {
+          return {
+            ...c,
+            word: value,
+            wordImage: undefined,
+            wordAudio: undefined,
+          };
+        }
+
+        if (field === 'sentence') {
+          return {
+            ...c,
+            sentence: value,
+            sentenceImage: undefined,
+            sentenceAudio: undefined,
+          };
+        }
+
+        return { ...c, [field]: value };
+      }),
     });
   };
 
@@ -56,81 +89,128 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
     });
   };
 
+  const buildGenerationTasks = (sourceBook: Book): GenerationTask[] => {
+    const tasks: GenerationTask[] = [];
+    const trimmedTitle = sourceBook.title.trim();
+
+    if (!sourceBook.coverImage && trimmedTitle) {
+      tasks.push({ kind: 'cover', label: '封面图片' });
+    }
+
+    sourceBook.cards.forEach((card, index) => {
+      const word = card.word.trim();
+      const sentence = card.sentence.trim();
+      const page = index + 1;
+
+      if (word && !card.wordImage) {
+        tasks.push({ kind: 'wordImage', cardIndex: index, cardId: card.id, text: word, label: `第 ${page} 页正面图片` });
+      }
+
+      if (word && !card.wordAudio) {
+        tasks.push({ kind: 'wordAudio', cardIndex: index, cardId: card.id, text: word, label: `第 ${page} 页正面发音` });
+      }
+
+      if (sentence && !card.sentenceImage) {
+        tasks.push({ kind: 'sentenceImage', cardIndex: index, cardId: card.id, text: sentence, label: `第 ${page} 页背面图片` });
+      }
+
+      if (sentence && !card.sentenceAudio) {
+        tasks.push({ kind: 'sentenceAudio', cardIndex: index, cardId: card.id, text: sentence, label: `第 ${page} 页背面发音` });
+      }
+    });
+
+    return tasks;
+  };
+
   const handleGenerateContent = async () => {
-    setIsGenerating(true);
-    let currentBook = { ...book };
-    try {
-      // Generate cover if missing
-      if (!currentBook.coverImage && currentBook.title) {
-        setProgress('正在生成封面图片...');
-        try {
-          currentBook.coverImage = await generateImage(currentBook.title, currentBook.style);
-          setBook({ ...currentBook });
-        } catch (e: any) {
-          if (e.message === 'API_KEY_ERROR') throw e;
-          console.error('Failed to generate cover image', e);
-        }
-      }
+    const tasks = buildGenerationTasks(book);
 
-      for (let i = 0; i < currentBook.cards.length; i++) {
-        const card = { ...currentBook.cards[i] };
-        let cardUpdated = false;
-        
-        if (card.word && !card.wordImage) {
-          setProgress(`正在生成卡片 ${i + 1} 的单词图片...`);
-          try {
-            card.wordImage = await generateImage(card.word, currentBook.style);
-            cardUpdated = true;
-          } catch (e: any) {
-            if (e.message === 'API_KEY_ERROR') throw e;
-            console.error(`Failed to generate word image for card ${i + 1}`, e);
-          }
-        }
-        if (card.word && !card.wordAudio) {
-          setProgress(`正在生成卡片 ${i + 1} 的单词发音...`);
-          try {
-            card.wordAudio = await generateAudio(card.word);
-            cardUpdated = true;
-          } catch (e: any) {
-            if (e.message === 'API_KEY_ERROR') throw e;
-            console.error(`Failed to generate word audio for card ${i + 1}`, e);
-          }
-        }
-        if (card.sentence && !card.sentenceImage) {
-          setProgress(`正在生成卡片 ${i + 1} 的句子图片...`);
-          try {
-            card.sentenceImage = await generateImage(card.sentence, currentBook.style);
-            cardUpdated = true;
-          } catch (e: any) {
-            if (e.message === 'API_KEY_ERROR') throw e;
-            console.error(`Failed to generate sentence image for card ${i + 1}`, e);
-          }
-        }
-        if (card.sentence && !card.sentenceAudio) {
-          setProgress(`正在生成卡片 ${i + 1} 的句子发音...`);
-          try {
-            card.sentenceAudio = await generateAudio(card.sentence);
-            cardUpdated = true;
-          } catch (e: any) {
-            if (e.message === 'API_KEY_ERROR') throw e;
-            console.error(`Failed to generate sentence audio for card ${i + 1}`, e);
-          }
-        }
-
-        if (cardUpdated) {
-          const newCards = [...currentBook.cards];
-          newCards[i] = card;
-          currentBook = { ...currentBook, cards: newCards };
-          setBook(currentBook);
-        }
-      }
-
-      setProgress('生成完成！');
+    if (tasks.length === 0) {
+      setProgress('没有需要生成的缺失内容。');
       setTimeout(() => setProgress(''), 2000);
+      return;
+    }
+
+    console.info('[BookEditor] Start generation run', {
+      bookTitle: book.title,
+      taskCount: tasks.length,
+      tasks: tasks.map((task) => task.label),
+    });
+
+    setIsGenerating(true);
+    let currentBook = {
+      ...book,
+      cards: book.cards.map((card) => ({ ...card })),
+    };
+    let successCount = 0;
+    let failedCount = 0;
+
+    try {
+      for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+        setProgress(`正在生成 ${i + 1}/${tasks.length}：${task.label}`);
+
+        try {
+          if (task.kind === 'cover') {
+            currentBook = {
+              ...currentBook,
+              coverImage: await generateImage(currentBook.title.trim(), currentBook.style),
+            };
+          } else {
+            const card = currentBook.cards[task.cardIndex];
+            if (!card || card.id !== task.cardId) {
+              continue;
+            }
+
+            const updatedCard = { ...card };
+
+            if (task.kind === 'wordImage') {
+              updatedCard.wordImage = await generateImage(task.text, currentBook.style);
+            } else if (task.kind === 'wordAudio') {
+              updatedCard.wordAudio = await generateAudio(task.text);
+            } else if (task.kind === 'sentenceImage') {
+              updatedCard.sentenceImage = await generateImage(task.text, currentBook.style);
+            } else {
+              updatedCard.sentenceAudio = await generateAudio(task.text);
+            }
+
+            const newCards = [...currentBook.cards];
+            newCards[task.cardIndex] = updatedCard;
+            currentBook = { ...currentBook, cards: newCards };
+          }
+
+          successCount += 1;
+          setBook(currentBook);
+        } catch (e: any) {
+          if (e.message === 'API_KEY_ERROR' || e.message === 'NETWORK_ERROR') throw e;
+          failedCount += 1;
+          console.error(`Failed to generate ${task.label}`, e);
+        }
+
+        if (i < tasks.length - 1) {
+          await delay(GENERATION_DELAY_MS);
+        }
+      }
+
+      console.info('[BookEditor] Generation run finished', {
+        bookTitle: book.title,
+        taskCount: tasks.length,
+        successCount,
+        failedCount,
+      });
+
+      if (failedCount === 0) {
+        setProgress(`本轮生成完成，共生成 ${successCount} 项。`);
+      } else {
+        setProgress(`本轮完成：成功 ${successCount} 项，失败 ${failedCount} 项。可再次点击只补缺失内容。`);
+      }
+      setTimeout(() => setProgress(''), 4000);
     } catch (error: any) {
       console.error(error);
       if (error.message === 'API_KEY_ERROR') {
         setProgress('API Key 无效或未配置，请刷新页面重新选择。');
+      } else if (error.message === 'NETWORK_ERROR') {
+        setProgress('当前网络无法连接 Gemini 服务，已停止本轮生成。请检查网络或代理后再试。');
       } else {
         setProgress('生成中断，部分内容可能未生成。请稍后再试。');
       }
@@ -138,6 +218,9 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
       setIsGenerating(false);
     }
   };
+
+  const generationTasks = buildGenerationTasks(book);
+  const pendingTaskCount = generationTasks.length;
 
   return (
     <div className="min-h-screen bg-[#f8fafc] font-sans pb-20 relative overflow-hidden">
@@ -202,16 +285,27 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
           <h2 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
             <Settings className="w-5 h-5 text-[#00d9ff]" /> 绘本设置
           </h2>
-          
+
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">绘本主题 (例如: At the Market)</label>
             <input
               type="text"
               value={book.title}
-              onChange={(e) => setBook({ ...book, title: e.target.value })}
+              onChange={(e) => {
+                const nextTitle = e.target.value;
+                setBook((prev) => {
+                  if (prev.title === nextTitle) return prev;
+                  return {
+                    ...prev,
+                    title: nextTitle,
+                    coverImage: undefined,
+                  };
+                });
+              }}
               className="w-full p-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-[#00d9ff] focus:border-[#00d9ff] outline-none transition-all bg-slate-50 focus:bg-white"
               placeholder="输入绘本主题..."
             />
+            <p className="mt-2 text-xs text-slate-400">修改主题后，会自动清空封面图，方便重新生成。</p>
           </div>
 
           <div>
@@ -258,7 +352,7 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
               >
                 <Trash2 className="w-4 h-4" />
               </button>
-              
+
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-lg mb-3 group-hover:bg-[#00d9ff]/10 group-hover:text-[#00d9ff] transition-colors">
                   卡片 {index + 1}
@@ -279,6 +373,7 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
                     <span className={`flex items-center gap-1 transition-colors ${card.wordImage ? 'text-[#00d9ff]' : ''}`}><ImageIcon className="w-3 h-3" /> 图片</span>
                     <span className={`flex items-center gap-1 transition-colors ${card.wordAudio ? 'text-[#ff006e]' : ''}`}><Volume2 className="w-3 h-3" /> 发音</span>
                   </div>
+                  <p className="mt-2 text-xs text-slate-400">修改词汇后，会自动清空这一面的图片和发音，方便重新生成。</p>
                 </div>
 
                 <div>
@@ -294,6 +389,7 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
                     <span className={`flex items-center gap-1 transition-colors ${card.sentenceImage ? 'text-[#00d9ff]' : ''}`}><ImageIcon className="w-3 h-3" /> 图片</span>
                     <span className={`flex items-center gap-1 transition-colors ${card.sentenceAudio ? 'text-[#ff006e]' : ''}`}><Volume2 className="w-3 h-3" /> 发音</span>
                   </div>
+                  <p className="mt-2 text-xs text-slate-400">修改句子后，会自动清空这一面的图片和发音，方便重新生成。</p>
                 </div>
               </div>
             </div>
@@ -319,10 +415,18 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
         <section className="bg-gradient-to-br from-[#ff006e]/10 via-[#ff8c00]/10 to-[#00d9ff]/10 p-8 rounded-3xl border border-white/50 text-center relative overflow-hidden shadow-sm">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/40 rounded-full blur-2xl"></div>
           <div className="relative z-10">
-            <h3 className="text-xl font-black text-slate-800 mb-2">AI 智能生成</h3>
-            <p className="text-sm text-slate-600 mb-6 font-medium">
-              一键为所有卡片生成可爱的配图和纯正的英语发音。
+            <h3 className="text-xl font-black text-slate-800 mb-2">AI 智能补生成</h3>
+            <p className="text-sm text-slate-600 mb-3 font-medium">
+              每轮只为缺失内容调用一次接口；如果还有漏项，你可以再次点击继续补齐。
             </p>
+            <p className="text-xs text-slate-500 mb-6 font-medium">
+              正在编辑的这本绘本，本轮会按缺失情况依次补封面、正面图片/发音、背面图片/发音。
+            </p>
+            {!isGenerating && (
+              <p className="text-xs text-slate-500 mb-6 font-medium">
+                当前预计补生成 {pendingTaskCount} 项（即最多调用 {pendingTaskCount} 次接口）。
+              </p>
+            )}
             <button
               onClick={handleGenerateContent}
               disabled={isGenerating || book.cards.length === 0}
@@ -332,10 +436,13 @@ export const BookEditor: React.FC<BookEditorProps> = ({ initialBook, onSave, onC
                 <span className="animate-pulse">{progress || '生成中...'}</span>
               ) : (
                 <>
-                  <Wand2 className="w-5 h-5" /> 一键生成缺失的图片和发音
+                  <Wand2 className="w-5 h-5" /> 一键补齐缺失的图片和发音
                 </>
               )}
             </button>
+            {!isGenerating && progress && (
+              <p className="mt-4 text-sm font-medium text-slate-600">{progress}</p>
+            )}
           </div>
         </section>
       </main>

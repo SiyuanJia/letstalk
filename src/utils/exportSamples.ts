@@ -37,7 +37,7 @@ function packBookIntoZip(
     const { bytes, ext } = dataUriToBytes(dataUri);
     const filename = `${name}.${ext}`;
     folder.file(filename, bytes);
-    return `/samples/${bookId}/${filename}`;
+    return `samples/${bookId}/${filename}`;
   };
 
   // 处理封面

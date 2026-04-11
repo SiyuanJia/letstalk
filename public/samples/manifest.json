@@ -424,5 +424,573 @@
       }
     ],
     "coverImage": "samples/1773413573612/cover.jpg"
+  },
+  {
+    "id": "1775465290835",
+    "title": "Going to School",
+    "style": "cartoon",
+    "cards": [
+      {
+        "id": "1775465330064",
+        "word": "street",
+        "sentence": "I can see the street",
+        "wordImage": "samples/1775465290835/1775465330064-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465330064-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465330064-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465330064-sentence-audio.wav"
+      },
+      {
+        "id": "1775465371265",
+        "word": "tree",
+        "sentence": "I can see the trees",
+        "wordImage": "samples/1775465290835/1775465371265-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465371265-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465371265-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465371265-sentence-audio.wav"
+      },
+      {
+        "id": "1775465393815",
+        "word": "light",
+        "sentence": "I can see the lights",
+        "wordImage": "samples/1775465290835/1775465393815-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465393815-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465393815-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465393815-sentence-audio.wav"
+      },
+      {
+        "id": "1775465404913",
+        "word": "people",
+        "sentence": "I can see the people",
+        "wordImage": "samples/1775465290835/1775465404913-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465404913-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465404913-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465404913-sentence-audio.wav"
+      },
+      {
+        "id": "1775465420368",
+        "word": "bus",
+        "sentence": "I can see the bus",
+        "wordImage": "samples/1775465290835/1775465420368-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465420368-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465420368-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465420368-sentence-audio.wav"
+      },
+      {
+        "id": "1775465435065",
+        "word": "driver",
+        "sentence": "I can see the driver",
+        "wordImage": "samples/1775465290835/1775465435065-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465435065-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465435065-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465435065-sentence-audio.wav"
+      },
+      {
+        "id": "1775465469199",
+        "word": "children",
+        "sentence": "I can see the children",
+        "wordImage": "samples/1775465290835/1775465469199-word.jpg",
+        "wordAudio": "samples/1775465290835/1775465469199-word-audio.wav",
+        "sentenceImage": "samples/1775465290835/1775465469199-sentence.jpg",
+        "sentenceAudio": "samples/1775465290835/1775465469199-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775465290835/cover.jpg"
+  },
+  {
+    "id": "1775726505570",
+    "title": "At the Park",
+    "style": "realistic",
+    "cards": [
+      {
+        "id": "1775726549559",
+        "word": "grassland",
+        "sentence": "Look at the grassland",
+        "wordImage": "samples/1775726505570/1775726549559-word.jpg",
+        "wordAudio": "samples/1775726505570/1775726549559-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775726549559-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775726549559-sentence-audio.wav"
+      },
+      {
+        "id": "1775744506729",
+        "word": "butterfly",
+        "sentence": "Look at the butterfly",
+        "wordImage": "samples/1775726505570/1775744506729-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744506729-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744506729-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744506729-sentence-audio.wav"
+      },
+      {
+        "id": "1775744538833",
+        "word": "sandbox",
+        "sentence": "Look at the sandbox",
+        "wordImage": "samples/1775726505570/1775744538833-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744538833-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744538833-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744538833-sentence-audio.wav"
+      },
+      {
+        "id": "1775744561276",
+        "word": "bench",
+        "sentence": "Look at the bench",
+        "wordImage": "samples/1775726505570/1775744561276-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744561276-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744561276-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744561276-sentence-audio.wav"
+      },
+      {
+        "id": "1775744574105",
+        "word": "slide",
+        "sentence": "Look at the slide",
+        "wordImage": "samples/1775726505570/1775744574105-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744574105-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744574105-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744574105-sentence-audio.wav"
+      },
+      {
+        "id": "1775744597777",
+        "word": "swing",
+        "sentence": "Look at the swing",
+        "wordImage": "samples/1775726505570/1775744597777-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744597777-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744597777-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744597777-sentence-audio.wav"
+      },
+      {
+        "id": "1775744619768",
+        "word": "children",
+        "sentence": "Look at the children",
+        "wordImage": "samples/1775726505570/1775744619768-word.jpg",
+        "wordAudio": "samples/1775726505570/1775744619768-word-audio.wav",
+        "sentenceImage": "samples/1775726505570/1775744619768-sentence.jpg",
+        "sentenceAudio": "samples/1775726505570/1775744619768-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775726505570/cover.jpg"
+  },
+  {
+    "id": "1775728861292",
+    "title": "Hop!Hop!Hop!",
+    "style": "felt",
+    "cards": [
+      {
+        "id": "1775728945512",
+        "word": "grass",
+        "sentence": "He hops on the grass",
+        "wordImage": "samples/1775728861292/1775728945512-word.jpg",
+        "wordAudio": "samples/1775728861292/1775728945512-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775728945512-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775728945512-sentence-audio.wav"
+      },
+      {
+        "id": "1775745231843",
+        "word": "woods",
+        "sentence": "He hops in the woods",
+        "wordImage": "samples/1775728861292/1775745231843-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745231843-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745231843-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745231843-sentence-audio.wav"
+      },
+      {
+        "id": "1775745259209",
+        "word": "leaf",
+        "sentence": "He hops in the leaves",
+        "wordImage": "samples/1775728861292/1775745259209-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745259209-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745259209-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745259209-sentence-audio.wav"
+      },
+      {
+        "id": "1775745294905",
+        "word": "stone",
+        "sentence": "He hops on the stones",
+        "wordImage": "samples/1775728861292/1775745294905-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745294905-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745294905-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745294905-sentence-audio.wav"
+      },
+      {
+        "id": "1775745329425",
+        "word": "puddle",
+        "sentence": "He hops in the puddle",
+        "wordImage": "samples/1775728861292/1775745329425-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745329425-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745329425-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745329425-sentence-audio.wav"
+      },
+      {
+        "id": "1775745351453",
+        "word": "sofa",
+        "sentence": "He hops on the sofa",
+        "wordImage": "samples/1775728861292/1775745351453-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745351453-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745351453-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745351453-sentence-audio.wav"
+      },
+      {
+        "id": "1775745370198",
+        "word": "stair",
+        "sentence": "He hops on the stairs",
+        "wordImage": "samples/1775728861292/1775745370198-word.jpg",
+        "wordAudio": "samples/1775728861292/1775745370198-word-audio.wav",
+        "sentenceImage": "samples/1775728861292/1775745370198-sentence.jpg",
+        "sentenceAudio": "samples/1775728861292/1775745370198-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775728861292/cover.jpg"
+  },
+  {
+    "id": "1775869404783",
+    "title": "Read with Me",
+    "style": "watercolor",
+    "cards": [
+      {
+        "id": "1775869433125",
+        "word": "mom",
+        "sentence": "I read with my mom",
+        "wordImage": "samples/1775869404783/1775869433125-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869433125-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869433125-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869433125-sentence-audio.wav"
+      },
+      {
+        "id": "1775869736672",
+        "word": "dad",
+        "sentence": "I read with my dad",
+        "wordImage": "samples/1775869404783/1775869736672-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869736672-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869736672-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869736672-sentence-audio.wav"
+      },
+      {
+        "id": "1775869945581",
+        "word": "grandma",
+        "sentence": "I read with my grandma",
+        "wordImage": "samples/1775869404783/1775869945581-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869945581-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869945581-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869945581-sentence-audio.wav"
+      },
+      {
+        "id": "1775869962772",
+        "word": "grandpa",
+        "sentence": "I read with my grandpa",
+        "wordImage": "samples/1775869404783/1775869962772-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869962772-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869962772-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869962772-sentence-audio.wav"
+      },
+      {
+        "id": "1775869983021",
+        "word": "friend",
+        "sentence": "I read with my friend",
+        "wordImage": "samples/1775869404783/1775869983021-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869983021-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869983021-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869983021-sentence-audio.wav"
+      },
+      {
+        "id": "1775869994764",
+        "word": "sister",
+        "sentence": "I read with my sister",
+        "wordImage": "samples/1775869404783/1775869994764-word.jpg",
+        "wordAudio": "samples/1775869404783/1775869994764-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775869994764-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775869994764-sentence-audio.wav"
+      },
+      {
+        "id": "1775870010724",
+        "word": "teacher",
+        "sentence": "I read with my teacher",
+        "wordImage": "samples/1775869404783/1775870010724-word.jpg",
+        "wordAudio": "samples/1775869404783/1775870010724-word-audio.wav",
+        "sentenceImage": "samples/1775869404783/1775870010724-sentence.jpg",
+        "sentenceAudio": "samples/1775869404783/1775870010724-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775869404783/cover.jpg"
+  },
+  {
+    "id": "1775894360954",
+    "title": "Dress up Games",
+    "style": "lineart",
+    "cards": [
+      {
+        "id": "1775894388559",
+        "word": "bird",
+        "sentence": "Here is a little bird",
+        "wordImage": "samples/1775894360954/1775894388559-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894388559-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894388559-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894388559-sentence-audio.wav"
+      },
+      {
+        "id": "1775894408097",
+        "word": "cat",
+        "sentence": "Here is a little cat",
+        "wordImage": "samples/1775894360954/1775894408097-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894408097-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894408097-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894408097-sentence-audio.wav"
+      },
+      {
+        "id": "1775894427594",
+        "word": "lion",
+        "sentence": "Here is a little lion",
+        "wordImage": "samples/1775894360954/1775894427594-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894427594-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894427594-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894427594-sentence-audio.wav"
+      },
+      {
+        "id": "1775894442811",
+        "word": "tiger",
+        "sentence": "Here is a little tiger",
+        "wordImage": "samples/1775894360954/1775894442811-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894442811-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894442811-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894442811-sentence-audio.wav"
+      },
+      {
+        "id": "1775894459945",
+        "word": "duck",
+        "sentence": "Here is a little duck",
+        "wordImage": "samples/1775894360954/1775894459945-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894459945-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894459945-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894459945-sentence-audio.wav"
+      },
+      {
+        "id": "1775894474689",
+        "word": "bee",
+        "sentence": "Here is a little bee",
+        "wordImage": "samples/1775894360954/1775894474689-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894474689-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894474689-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894474689-sentence-audio.wav"
+      },
+      {
+        "id": "1775894489273",
+        "word": "dinosaur",
+        "sentence": "Here is a little dinosaur",
+        "wordImage": "samples/1775894360954/1775894489273-word.jpg",
+        "wordAudio": "samples/1775894360954/1775894489273-word-audio.wav",
+        "sentenceImage": "samples/1775894360954/1775894489273-sentence.jpg",
+        "sentenceAudio": "samples/1775894360954/1775894489273-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775894360954/cover.jpg"
+  },
+  {
+    "id": "1775895291129",
+    "title": "PizzaTime",
+    "style": "realistic",
+    "cards": [
+      {
+        "id": "1775895334420",
+        "word": "pan",
+        "sentence": "Look at the pan",
+        "wordImage": "samples/1775895291129/1775895334420-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895334420-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895334420-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895334420-sentence-audio.wav"
+      },
+      {
+        "id": "1775895366343",
+        "word": "dough",
+        "sentence": "Look at the dough",
+        "wordImage": "samples/1775895291129/1775895366343-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895366343-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895366343-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895366343-sentence-audio.wav"
+      },
+      {
+        "id": "1775895478747",
+        "word": "sauce",
+        "sentence": "Look at the sauce",
+        "wordImage": "samples/1775895291129/1775895478747-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895478747-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895478747-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895478747-sentence-audio.wav"
+      },
+      {
+        "id": "1775895579647",
+        "word": "cheese",
+        "sentence": "Look at the cheese",
+        "wordImage": "samples/1775895291129/1775895579647-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895579647-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895579647-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895579647-sentence-audio.wav"
+      },
+      {
+        "id": "1775895597599",
+        "word": "sausage",
+        "sentence": "Look at the sausage",
+        "wordImage": "samples/1775895291129/1775895597599-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895597599-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895597599-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895597599-sentence-audio.wav"
+      },
+      {
+        "id": "1775895641743",
+        "word": "tomato",
+        "sentence": "Look at the tomatoes",
+        "wordImage": "samples/1775895291129/1775895641743-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895641743-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895641743-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895641743-sentence-audio.wav"
+      },
+      {
+        "id": "1775895667696",
+        "word": "corn",
+        "sentence": "Look at the corn",
+        "wordImage": "samples/1775895291129/1775895667696-word.jpg",
+        "wordAudio": "samples/1775895291129/1775895667696-word-audio.wav",
+        "sentenceImage": "samples/1775895291129/1775895667696-sentence.jpg",
+        "sentenceAudio": "samples/1775895291129/1775895667696-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775895291129/cover.jpg"
+  },
+  {
+    "id": "1775898116846",
+    "title": "Pond Animals",
+    "style": "realistic",
+    "cards": [
+      {
+        "id": "1775898814019",
+        "word": "butterfly",
+        "sentence": "I can see one butterfly",
+        "wordImage": "samples/1775898116846/1775898814019-word.jpg",
+        "wordAudio": "samples/1775898116846/1775898814019-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775898814019-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775898814019-sentence-audio.wav"
+      },
+      {
+        "id": "1775898850999",
+        "word": "swan",
+        "sentence": "I can see two swans",
+        "wordImage": "samples/1775898116846/1775898850999-word.jpg",
+        "wordAudio": "samples/1775898116846/1775898850999-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775898850999-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775898850999-sentence-audio.wav"
+      },
+      {
+        "id": "1775898904069",
+        "word": "worm",
+        "sentence": "I can see three worms",
+        "wordImage": "samples/1775898116846/1775898904069-word.jpg",
+        "wordAudio": "samples/1775898116846/1775898904069-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775898904069-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775898904069-sentence-audio.wav"
+      },
+      {
+        "id": "1775898935821",
+        "word": "fish",
+        "sentence": "I can see four fish",
+        "wordImage": "samples/1775898116846/1775898935821-word.jpg",
+        "wordAudio": "samples/1775898116846/1775898935821-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775898935821-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775898935821-sentence-audio.wav"
+      },
+      {
+        "id": "1775898980616",
+        "word": "turtle",
+        "sentence": "I can see five turtles",
+        "wordImage": "samples/1775898116846/1775898980616-word.jpg",
+        "wordAudio": "samples/1775898116846/1775898980616-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775898980616-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775898980616-sentence-audio.wav"
+      },
+      {
+        "id": "1775899005075",
+        "word": "frog",
+        "sentence": "I can see six frogs",
+        "wordImage": "samples/1775898116846/1775899005075-word.jpg",
+        "wordAudio": "samples/1775898116846/1775899005075-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775899005075-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775899005075-sentence-audio.wav"
+      },
+      {
+        "id": "1775899097419",
+        "word": "duck",
+        "sentence": "I can see seven ducks",
+        "wordImage": "samples/1775898116846/1775899097419-word.jpg",
+        "wordAudio": "samples/1775898116846/1775899097419-word-audio.wav",
+        "sentenceImage": "samples/1775898116846/1775899097419-sentence.jpg",
+        "sentenceAudio": "samples/1775898116846/1775899097419-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775898116846/cover.jpg"
+  },
+  {
+    "id": "1775900061668",
+    "title": "Set the Table",
+    "style": "realistic",
+    "cards": [
+      {
+        "id": "1775900092985",
+        "word": "mat",
+        "sentence": "I put the mat here",
+        "wordImage": "samples/1775900061668/1775900092985-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900092985-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900092985-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900092985-sentence-audio.wav"
+      },
+      {
+        "id": "1775900114506",
+        "word": "plate",
+        "sentence": "I put the plate here",
+        "wordImage": "samples/1775900061668/1775900114506-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900114506-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900114506-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900114506-sentence-audio.wav"
+      },
+      {
+        "id": "1775900140586",
+        "word": "bowl",
+        "sentence": "I put the bowl here",
+        "wordImage": "samples/1775900061668/1775900140586-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900140586-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900140586-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900140586-sentence-audio.wav"
+      },
+      {
+        "id": "1775900166882",
+        "word": "jug",
+        "sentence": "I put the jug here",
+        "wordImage": "samples/1775900061668/1775900166882-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900166882-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900166882-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900166882-sentence-audio.wav"
+      },
+      {
+        "id": "1775900180272",
+        "word": "glass",
+        "sentence": "I put the glass here",
+        "wordImage": "samples/1775900061668/1775900180272-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900180272-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900180272-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900180272-sentence-audio.wav"
+      },
+      {
+        "id": "1775900205921",
+        "word": "straw",
+        "sentence": "I put the straw here",
+        "wordImage": "samples/1775900061668/1775900205921-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900205921-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900205921-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900205921-sentence-audio.wav"
+      },
+      {
+        "id": "1775900258025",
+        "word": "chopsticks",
+        "sentence": "I put the chopsticks here",
+        "wordImage": "samples/1775900061668/1775900258025-word.jpg",
+        "wordAudio": "samples/1775900061668/1775900258025-word-audio.wav",
+        "sentenceImage": "samples/1775900061668/1775900258025-sentence.jpg",
+        "sentenceAudio": "samples/1775900061668/1775900258025-sentence-audio.wav"
+      }
+    ],
+    "coverImage": "samples/1775900061668/cover.jpg"
   }
 ]

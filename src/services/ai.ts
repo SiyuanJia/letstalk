@@ -69,21 +69,61 @@ export function createWavDataUri(pcmBase64: string, sampleRate: number = 24000):
 
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-const executeWithRetry = async <T>(operation: () => Promise<T>, maxRetries = 3): Promise<T> => {
+const isApiKeyError = (message: string) =>
+  message.includes('Requested entity was not found') ||
+  message.includes('PERMISSION_DENIED');
+
+const isNetworkConnectionError = (message: string) =>
+  message.includes('failed to fetch') ||
+  message.includes('err_connection_closed') ||
+  message.includes('connection closed') ||
+  message.includes('networkerror') ||
+  message.includes('network error') ||
+  message.includes('couldn\'t connect');
+
+const isRateLimitError = (message: string) =>
+  message.includes('too many request') ||
+  message.includes('too many requests') ||
+  message.includes('rate limit') ||
+  message.includes('resource_exhausted') ||
+  message.includes('quota');
+
+const isRetryableError = (message: string) =>
+  message.includes('timeout') ||
+  message.includes('network') ||
+  message.includes('fetch') ||
+  message.includes('temporar') ||
+  message.includes('unavailable') ||
+  message.includes('internal');
+
+const executeWithRetry = async <T>(operation: () => Promise<T>, maxRetries = 0): Promise<T> => {
   let lastError: any;
-  for (let i = 0; i < maxRetries; i++) {
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       return await operation();
     } catch (error: any) {
       lastError = error;
-      if (error?.message?.includes('Requested entity was not found') || error?.message?.includes('PERMISSION_DENIED')) {
-        throw new Error("API_KEY_ERROR");
+      const message = String(error?.message || '').toLowerCase();
+
+      if (isApiKeyError(message)) {
+        throw new Error('API_KEY_ERROR');
       }
-      // If it's a rate limit or server error, wait and retry
-      console.warn(`API call failed, retrying in ${2000 * (i + 1)}ms...`, error);
-      await delay(2000 * (i + 1));
+
+      if (isNetworkConnectionError(message)) {
+        throw new Error('NETWORK_ERROR');
+      }
+
+      if (isRateLimitError(message) || !isRetryableError(message) || attempt === maxRetries) {
+        throw error;
+      }
+
+      const waitMs = 1500 * (attempt + 1);
+      console.warn(`API call failed, retrying in ${waitMs}ms...`, error);
+      await delay(waitMs);
     }
   }
+
   throw lastError;
 };
 
@@ -95,7 +135,7 @@ export const generateImage = async (prompt: string, style: string): Promise<stri
     'felt': 'Cozy felt craft style, soft fabric texture, warm colors, handmade look, simple and cute for toddlers.',
     'watercolor': "Gentle watercolor painting, soft edges, pastel colors, dreamy and cute, suitable for a children's book.",
     'realistic': 'High quality realistic photography, bright lighting, suitable for children, clear subject, vibrant colors.',
-    'lineart': 'Simple black and white line art, stick figure style, clean white background, cute and easy for kids to understand, minimalist.'
+    'lineart': 'Warm hand-drawn children\'s book illustration, soft sketch lines, gentle brush or crayon texture, cute and cozy atmosphere, sweet expressions, simple but full scene composition, storybook feeling.'
   };
 
   const styleInstruction = stylePrompts[style] || stylePrompts['cartoon'];

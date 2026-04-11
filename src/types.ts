@@ -22,7 +22,7 @@ export const STYLES = [
   { id: 'felt', name: '毛毡风 (Felt)' },
   { id: 'watercolor', name: '水彩风 (Watercolor)' },
   { id: 'realistic', name: '写实风 (Realistic)' },
-  { id: 'lineart', name: '简笔画 (Line Art)' },
+  { id: 'lineart', name: '手绘风 (Hand-drawn)' },
 ];
 
 declare global {

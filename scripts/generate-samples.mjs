@@ -57,7 +57,7 @@ const STYLE_PROMPTS = {
   felt: 'Cozy felt craft style, soft fabric texture, warm colors, handmade look, simple and cute for toddlers.',
   watercolor: "Gentle watercolor painting, soft edges, pastel colors, dreamy and cute, suitable for a children's book.",
   realistic: 'High quality realistic photography, bright lighting, suitable for children, clear subject, vibrant colors.',
-  lineart: 'Simple black and white line art, stick figure style, clean white background, cute and easy for kids to understand, minimalist.',
+  lineart: 'Warm hand-drawn children\'s book illustration, soft sketch lines, gentle brush or crayon texture, cute and cozy atmosphere, sweet expressions, simple but full scene composition, storybook feeling.',
 };
 
 // ========== 生成图片 ==========
@@ -165,7 +165,7 @@ async function main() {
       const imgBuf = await generateImage(book.title, book.style);
       const coverFile = `cover.png`;
       fs.writeFileSync(path.join(bookDir, coverFile), imgBuf);
-      bookData.coverImage = `/samples/${book.id}/${coverFile}`;
+      bookData.coverImage = `samples/${book.id}/${coverFile}`;
       console.log(`  ✅ 封面已保存`);
     } catch (e) {
       console.error(`  ❌ 封面生成失败: ${e.message}`);
@@ -183,7 +183,7 @@ async function main() {
         const buf = await generateImage(card.word, book.style);
         const file = `${card.id}-word.png`;
         fs.writeFileSync(path.join(bookDir, file), buf);
-        cardData.wordImage = `/samples/${book.id}/${file}`;
+        cardData.wordImage = `samples/${book.id}/${file}`;
         console.log(` ✅`);
       } catch (e) {
         console.log(` ❌ ${e.message}`);
@@ -196,7 +196,7 @@ async function main() {
         const buf = await generateAudio(card.word);
         const file = `${card.id}-word.wav`;
         fs.writeFileSync(path.join(bookDir, file), buf);
-        cardData.wordAudio = `/samples/${book.id}/${file}`;
+        cardData.wordAudio = `samples/${book.id}/${file}`;
         console.log(` ✅`);
       } catch (e) {
         console.log(` ❌ ${e.message}`);
@@ -209,7 +209,7 @@ async function main() {
         const buf = await generateImage(card.sentence, book.style);
         const file = `${card.id}-sentence.png`;
         fs.writeFileSync(path.join(bookDir, file), buf);
-        cardData.sentenceImage = `/samples/${book.id}/${file}`;
+        cardData.sentenceImage = `samples/${book.id}/${file}`;
         console.log(` ✅`);
       } catch (e) {
         console.log(` ❌ ${e.message}`);
@@ -222,7 +222,7 @@ async function main() {
         const buf = await generateAudio(card.sentence);
         const file = `${card.id}-sentence.wav`;
         fs.writeFileSync(path.join(bookDir, file), buf);
-        cardData.sentenceAudio = `/samples/${book.id}/${file}`;
+        cardData.sentenceAudio = `samples/${book.id}/${file}`;
         console.log(` ✅`);
       } catch (e) {
         console.log(` ❌ ${e.message}`);
